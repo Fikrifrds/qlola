@@ -38,7 +38,7 @@ class DemoNavbar extends React.Component {
             id="navbar-main"
           >
             <Container>
-              <NavbarBrand className="mr-lg-5" to="/page" tag={Link}>
+              <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                 <img
                   alt="..."
                   src={require("assets/img/brand/qlola2-white.png")}
