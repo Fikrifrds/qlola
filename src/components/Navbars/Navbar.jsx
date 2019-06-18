@@ -137,16 +137,16 @@ class DemoNavbar extends React.Component {
                       <span className="nav-link-inner--text">Examples</span>
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem to="/landing-page-2" tag={Link}>
+                      <DropdownItem to="/landing" tag={Link}>
                         Landing
                       </DropdownItem>
                       <DropdownItem to="/about" tag={Link}>
                         About
                       </DropdownItem>
-                      <DropdownItem to="/login-page-2" tag={Link}>
+                      <DropdownItem to="/login" tag={Link}>
                         Login
                       </DropdownItem>
-                      <DropdownItem to="/register-page-2" tag={Link}>
+                      <DropdownItem to="/register" tag={Link}>
                         Register
                       </DropdownItem>
                     </DropdownMenu>
@@ -218,6 +218,7 @@ class DemoNavbar extends React.Component {
                     </UncontrolledTooltip>
                   </NavItem>
                   <NavItem className="d-none d-lg-block ml-lg-4">
+                    <Link to="/hire-us">
                     <Button
                       className="btn-neutral btn-icon"
                       color="default"
@@ -225,12 +226,13 @@ class DemoNavbar extends React.Component {
                       target="_blank"
                     >
                       <span className="btn-inner--icon">
-                        <i className="fa fa-cloud-download mr-2" />
+                        <i className="fa fa-handshake-o mr-2" />
                       </span>
                       <span className="nav-link-inner--text ml-1">
                         Hire us
                       </span>
                     </Button>
+                    </Link>
                   </NavItem>
                 </Nav>
               </UncontrolledCollapse>

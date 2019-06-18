@@ -24,8 +24,8 @@ import Navbar from "components/Navbars/Navbar.jsx";
 import CardsFooter from "components/Footers/CardsFooter.jsx";
 
 // index page sections
-import Hero from "../Sections/Hero.jsx";
-import Download from "../Sections/Download.jsx";
+import Hero from "./Sections/Hero.jsx";
+import Download from "./Sections/Download.jsx";
 
 class Index extends React.Component {
 state = {}
