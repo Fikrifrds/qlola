@@ -14,7 +14,7 @@
     "compile-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.css",
     "minify-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.min.css --output-style compressed",
     "map-sass": "node-sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.css --source-map true",
-    "launch" : "react-scripts build && git add . && git commit -am 'Make it better' && git push origin master"
+    "launch": "react-scripts build && git add . && git commit -am 'Make it better' && git push origin master"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,6 +34,7 @@
     "react": "16.8.6",
     "react-datetime": "2.16.3",
     "react-dom": "16.8.6",
+    "react-number-format": "^4.2.0",
     "react-router": "5.0.0",
     "react-router-dom": "5.0.0",
     "react-scripts": "3.0.0",

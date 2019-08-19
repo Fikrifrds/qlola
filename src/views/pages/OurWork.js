@@ -4,8 +4,8 @@ import React from "react";
 import { Button, Card, Container, Row, Col } from "reactstrap";
 
 // core components
-import Navbar from "components/Navbars/Navbar.jsx";
-import SimpleFooter from "components/Footers/SimpleFooter.jsx";
+import Navbar from "components/Navbars/Navbar.js";
+import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 class About extends React.Component {
   componentDidMount() {

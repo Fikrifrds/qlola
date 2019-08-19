@@ -4,8 +4,8 @@ import React from "react";
 import { Button, Card, Container, Row, Col } from "reactstrap";
 
 // core components
-import Navbar from "components/Navbars/Navbar.jsx";
-import SimpleFooter from "components/Footers/SimpleFooter.jsx";
+import Navbar from "components/Navbars/Navbar.js";
+import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 class About extends React.Component {
   componentDidMount() {
@@ -20,7 +20,7 @@ class About extends React.Component {
         <main className="profile-page" ref="main">
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}
-            <div className="shape shape-style-1 bg-gradient-default alpha-4">
+            <div className="shape bg-gradient-default alpha-4">
               <span />
               <span />
               <span />

@@ -38,12 +38,16 @@ class DemoNavbar extends React.Component {
             id="navbar-main"
           >
             <Container>
-              <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
+            <a href="/">
+              <NavbarBrand className="mr-lg-5">
+                
                 <img
                   alt="..."
-                  src={require("assets/img/brand/qlola2-white.png")}
+                  src={require("assets/img/brand/qlola4-white.png")}
                 />
+                
               </NavbarBrand>
+              </a>
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
               </button>
@@ -51,12 +55,12 @@ class DemoNavbar extends React.Component {
                 <div className="navbar-collapse-header">
                   <Row>
                     <Col className="collapse-brand" xs="6">
-                      <Link to="/">
+                      <a href="/">
                         <img
                           alt="..."
                           src={require("assets/img/brand/qlola2-blue.png")}
                         />
-                      </Link>
+                      </a>
                     </Col>
                     <Col className="collapse-close" xs="6">
                       <button className="navbar-toggler" id="navbar_global">
@@ -70,7 +74,7 @@ class DemoNavbar extends React.Component {
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Components</span>
+                      <span className="nav-link-inner--text">Fitur</span>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-xl">
                       <div className="dropdown-menu-inner">
@@ -80,11 +84,11 @@ class DemoNavbar extends React.Component {
                           target="_blank"
                         >
                           <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                            <i className="ni ni-spaceship" />
+                            <i className="ni ni-tablet-button" />
                           </div>
                           <Media body className="ml-3">
                             <h6 className="heading text-primary mb-md-1">
-                              Getting started
+                              Point of Sales
                             </h6>
                             <p className="description d-none d-md-inline-block mb-0">
                               Learn how to use Argon compiling Scss, change
@@ -94,16 +98,18 @@ class DemoNavbar extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
-                          href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/colors?ref=adsr-navbar"
+                          to="/landing"
                           target="_blank"
                         >
                           <div className="icon icon-shape bg-gradient-success rounded-circle text-white">
-                            <i className="ni ni-palette" />
+                            <i className="ni ni-cart" />
                           </div>
                           <Media body className="ml-3">
+                          <Link to="/landing">
                             <h6 className="heading text-primary mb-md-1">
-                              Foundation
+                              Qlola Store
                             </h6>
+                            </Link>
                             <p className="description d-none d-md-inline-block mb-0">
                               Learn more about colors, typography, icons and the
                               grid system we used for Argon.
@@ -116,11 +122,11 @@ class DemoNavbar extends React.Component {
                           target="_blank"
                         >
                           <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
-                            <i className="ni ni-ui-04" />
+                            <i className="ni ni-palette" />
                           </div>
                           <Media body className="ml-3">
-                            <h5 className="heading text-warning mb-md-1">
-                              Components
+                            <h5 className="heading text-primary mb-md-1">
+                              Custome Web App
                             </h5>
                             <p className="description d-none d-md-inline-block mb-0">
                               Browse our 50 beautiful handcrafted components
@@ -131,105 +137,36 @@ class DemoNavbar extends React.Component {
                       </div>
                     </DropdownMenu>
                   </UncontrolledDropdown>
-                  <UncontrolledDropdown nav>
-                    <DropdownToggle nav>
-                      <i className="ni ni-collection d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Examples</span>
-                    </DropdownToggle>
-                    <DropdownMenu>
-                      <DropdownItem to="/landing" tag={Link}>
-                        Landing
-                      </DropdownItem>
-                      <DropdownItem to="/about" tag={Link}>
-                        About
-                      </DropdownItem>
-                      <DropdownItem to="/login" tag={Link}>
-                        Login
-                      </DropdownItem>
-                      <DropdownItem to="/register" tag={Link}>
-                        Register
-                      </DropdownItem>
-                    </DropdownMenu>
-                  </UncontrolledDropdown>
+                  <NavItem>
+                  <NavLink tag={Link}
+                      className="nav-link-icon"
+                      to="/pricing"
+                    >
+                      Harga
+                    </NavLink>
+                  </NavItem>
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
+                  
                   <NavItem>
-                    <NavLink
+                  <NavLink tag={Link}
                       className="nav-link-icon"
-                      href="https://www.facebook.com/creativetim"
-                      id="tooltip333589074"
-                      target="_blank"
+                      to="/login"
                     >
-                      <i className="fa fa-facebook-square" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">
-                        Facebook
-                      </span>
+                      Login
                     </NavLink>
-                    <UncontrolledTooltip delay={0} target="tooltip333589074">
-                      Like us on Facebook
-                    </UncontrolledTooltip>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className="nav-link-icon"
-                      href="https://www.instagram.com/creativetimofficial"
-                      id="tooltip356693867"
-                      target="_blank"
-                    >
-                      <i className="fa fa-instagram" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">
-                        Instagram
-                      </span>
-                    </NavLink>
-                    <UncontrolledTooltip delay={0} target="tooltip356693867">
-                      Follow us on Instagram
-                    </UncontrolledTooltip>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className="nav-link-icon"
-                      href="https://twitter.com/creativetim"
-                      id="tooltip184698705"
-                      target="_blank"
-                    >
-                      <i className="fa fa-twitter-square" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">
-                        Twitter
-                      </span>
-                    </NavLink>
-                    <UncontrolledTooltip delay={0} target="tooltip184698705">
-                      Follow us on Twitter
-                    </UncontrolledTooltip>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className="nav-link-icon"
-                      href="https://github.com/creativetimofficial/argon-design-system-react"
-                      id="tooltip112445449"
-                      target="_blank"
-                    >
-                      <i className="fa fa-github" />
-                      <span className="nav-link-inner--text d-lg-none ml-2">
-                        Github
-                      </span>
-                    </NavLink>
-                    <UncontrolledTooltip delay={0} target="tooltip112445449">
-                      Star us on Github
-                    </UncontrolledTooltip>
                   </NavItem>
                   <NavItem className="d-none d-lg-block ml-lg-4">
-                    <Link to="/hire-us">
+                    <Link to="/register">
                     <Button
                       className="btn-neutral btn-icon"
                       color="default"
-                      href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-navbar"
-                      target="_blank"
                     >
-                      <span className="btn-inner--icon">
+                      {/* <span className="btn-inner--icon">
                         <i className="fa fa-handshake-o mr-2" />
-                      </span>
+                      </span> */}
                       <span className="nav-link-inner--text ml-1">
-                        Hire us
+                        Daftar
                       </span>
                     </Button>
                     </Link>

@@ -20,12 +20,12 @@ import {
 import classnames from "classnames";
 
 // core components
-import Navbar from "components/Navbars/Navbar.jsx";
-import CardsFooter from "components/Footers/CardsFooter.jsx";
+import Navbar from "components/Navbars/Navbar.js";
+import CardsFooter from "components/Footers/CardsFooter.js";
 
 // index page sections
-import Hero from "./Sections/Hero.jsx";
-import Download from "./Sections/Download.jsx";
+import Hero from "./Sections/Hero.js";
+import Download from "./Sections/Download.js";
 
 class Index extends React.Component {
 state = {}
