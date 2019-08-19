@@ -56,7 +56,7 @@ class Landing extends React.Component {
               <span className="span-100" />
               </div>
               
-              <Container className="shape-container d-flex align-items-center py-5">
+              <Container className="shape-container align-items-center py-5">
                 <Row className="row-grid align-items-center" style={{ paddingTop: '0px'}}>
                 <Col className="order-md-2" md="7">
                   <img

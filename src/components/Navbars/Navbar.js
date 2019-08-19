@@ -149,12 +149,12 @@ class DemoNavbar extends React.Component {
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   
                   <NavItem>
-                  <NavLink tag={Link}
+                  <a
                       className="nav-link-icon"
-                      to="/login"
+                      href="https://pos.qlola.com/"
                     >
                       Login
-                    </NavLink>
+                    </a>
                   </NavItem>
                   <NavItem className="d-none d-lg-block ml-lg-4">
                     <Link to="/register">
