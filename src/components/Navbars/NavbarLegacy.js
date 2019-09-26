@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 // JavaScript plugin that hides or shows a component based on your scroll
 import Headroom from "headroom.js";
 // reactstrap components
@@ -14,7 +14,7 @@ import {
   NavbarBrand,
   Navbar,
   NavItem,
-  // NavLink,
+  NavLink,
   Nav,
   Container,
   Row,
@@ -38,14 +38,16 @@ class DemoNavbar extends React.Component {
             id="navbar-main"
           >
             <Container>
-            <Link to="/">
+            <a href="/">
               <NavbarBrand className="mr-lg-12">
+                
                 <img
                   alt="..."
                   src={require("assets/img/brand/qlo-logo.png")}
                 />
+                
               </NavbarBrand>
-              </Link>
+              </a>
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
               </button>
@@ -68,7 +70,7 @@ class DemoNavbar extends React.Component {
                     </Col>
                   </Row>
                 </div>
-                {/* <Nav className="navbar-nav-hover align-items-lg-center" navbar>
+                <Nav className="navbar-nav-hover align-items-lg-center" navbar>
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
@@ -133,35 +135,47 @@ class DemoNavbar extends React.Component {
                       </div>
                     </DropdownMenu>
                   </UncontrolledDropdown>
-                </Nav> */}
-
-                <Nav className="align-items-lg-center ml-lg-auto" navbar>
-                  <NavItem>
-                    <NavLink tag={Link}
-                      className="nav-link-icon"
-                      to="/our-works"
-                    >
-                      Our Works
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink tag={Link}
-                      className="nav-link-icon"
-                      to="/contact-us"
-                    >
-                      Contact Us
-                    </NavLink>
-                  </NavItem>
                   <NavItem>
                   <NavLink tag={Link}
                       className="nav-link-icon"
-                      to="/about"
+                      to="/pricing"
                     >
-                      About Us
+                      Harga
                     </NavLink>
                   </NavItem>
                 </Nav>
-
+                <Nav className="align-items-lg-center ml-lg-auto" navbar>
+                  
+                  <NavItem>
+                  {/* <NavLink tag={Link}
+                      className="nav-link-icon"
+                      to="/login"
+                    >
+                      Masuk
+                    </NavLink> */}
+                  <a
+                      className="nav-link-icon"
+                      href="https://pos.qlola.com/"
+                    >
+                      Login
+                    </a>
+                  </NavItem>
+                  <NavItem className="d-none d-lg-block ml-lg-4">
+                    <Link to="/register">
+                    <Button
+                      className="btn-neutral btn-icon"
+                      color="default"
+                    >
+                      {/* <span className="btn-inner--icon">
+                        <i className="fa fa-handshake-o mr-2" />
+                      </span> */}
+                      <span className="nav-link-inner--text ml-1">
+                        Daftar
+                      </span>
+                    </Button>
+                    </Link>
+                  </NavItem>
+                </Nav>
               </UncontrolledCollapse>
             </Container>
           </Navbar>

@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
-class Hero extends React.Component {
-  render() {
+function Hero(){
+
+  const bridges = [ 'Website', 'E-Commerce', 'Web App', 'Software', 'Landing Page', 'SaaS', 'API' ]
+  const [bridge, setBridge] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      bridge === bridges.length - 1 ? setBridge(0) : setBridge(val => val + 1);
+      console.log('fires')
+    }, 3000);
+    return () => clearInterval(id);
+  }, [bridge, bridges.length]);
+
     return (
       <>
         <div className="position-relative">
@@ -24,6 +35,21 @@ class Hero extends React.Component {
               <span className="span-50" />
               <span className="span-100" />
             </div>
+            <div className="separator separator-bottom separator-skew">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                version="1.1"
+                viewBox="0 0 2560 100"
+                x="0"
+                y="0"
+              >
+                <polygon
+                  className="fill-white"
+                  points="2560 0 2560 100 0 100"
+                />
+              </svg>
+            </div>
             <Container className="shape-container d-flex align-items-center py-lg">
               <div className="col px-0">
                 <Row className="align-items-center justify-content-center">
@@ -31,35 +57,34 @@ class Hero extends React.Component {
                     <img
                       alt="..."
                       className="img-fluid"
-                      src={require("assets/img/brand/qlola2-white.png")}
+                      src={require("assets/img/brand/qlo-logo.png")}
                       style={{ width: "200px" }}
                     />
-                    <h1 className="display-3 text-white">
-                        <span>Your web development team</span>
-                    </h1>
+                    
                     <p className="lead text-white">
-                      We provide high quality web application
+                      We Build <strong>Solutions</strong> Through
                     </p>
+                    <h1 className="display-3">
+                        <span style={{ color: '#FFC719', fontWeight: 'bold'}}><em>{bridges[bridge]}</em></span>
+                    </h1>
                     <div className="btn-wrapper mt-5">
-                      <Link to="/hire-us">
+                      <Link to="/contact-us">
                       <Button
-                        className="btn-white btn-icon mb-3 mb-sm-0"
+                        className="btn-white btn-icon mb-3 mb-sm-0 mr-3"
                         color="default"
                         size="lg"
                       >
                         <span className="btn-inner--icon mr-1">
                         <i className="fa fa-handshake-o" />
                         </span>
-                        <span className="btn-inner--text">Hire Us</span>
+                        <span className="btn-inner--text">Contact Us</span>
                       </Button>
                       </Link>{" "}
                       <Link to="/our-works">
                       <Button
                         className="btn-icon mb-3 mb-sm-0"
                         color="github"
-                        href="https://github.com/creativetimofficial/argon-design-system-react"
                         size="lg"
-                        target="_blank"
                       >
                         <span className="btn-inner--icon mr-1">
                           <i className="fa fa-diamond" />
@@ -90,7 +115,6 @@ class Hero extends React.Component {
         </div>
       </>
     );
-  }
 }
 
 export default Hero;

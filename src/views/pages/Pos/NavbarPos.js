@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 // JavaScript plugin that hides or shows a component based on your scroll
 import Headroom from "headroom.js";
 // reactstrap components
@@ -14,7 +14,7 @@ import {
   NavbarBrand,
   Navbar,
   NavItem,
-  // NavLink,
+  NavLink,
   Nav,
   Container,
   Row,
@@ -38,12 +38,14 @@ class DemoNavbar extends React.Component {
             id="navbar-main"
           >
             <Container>
-            <Link to="/">
+            <Link to="/pos">
               <NavbarBrand className="mr-lg-12">
+                
                 <img
                   alt="..."
-                  src={require("assets/img/brand/qlo-logo.png")}
+                  src={require("assets/img/brand/qlo-logo-pos.png")}
                 />
+                
               </NavbarBrand>
               </Link>
               <button className="navbar-toggler" id="navbar_global">
@@ -53,7 +55,7 @@ class DemoNavbar extends React.Component {
                 <div className="navbar-collapse-header">
                   <Row>
                     <Col className="collapse-brand" xs="6">
-                      <a href="/">
+                      <a href="/pos">
                         <img
                           alt="..."
                           src={require("assets/img/brand/qlola2-blue.png")}
@@ -68,26 +70,26 @@ class DemoNavbar extends React.Component {
                     </Col>
                   </Row>
                 </div>
-                {/* <Nav className="navbar-nav-hover align-items-lg-center" navbar>
+                <Nav className="navbar-nav-hover align-items-lg-center" navbar>
                   <UncontrolledDropdown nav>
                     <DropdownToggle nav>
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Produk</span>
+                      <span className="nav-link-inner--text">Fitur</span>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-xl">
                       <div className="dropdown-menu-inner">
                         <Media
                           className="d-flex align-items-center"
+                          href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/overview?ref=adsr-navbar"
+                          target="_blank"
                         >
                           <div className="icon icon-shape bg-gradient-primary rounded-circle text-white">
                             <i className="ni ni-tablet-button" />
                           </div>
                           <Media body className="ml-3">
-                          <Link to="/pos">
                             <h6 className="heading text-primary mb-md-1">
                               Point of Sales
                             </h6>
-                          </Link>
                             <p className="description d-none d-md-inline-block mb-0">
                               Learn how to use Argon compiling Scss, change
                               brand colors and more.
@@ -116,6 +118,8 @@ class DemoNavbar extends React.Component {
                         </Media>
                         <Media
                           className="d-flex align-items-center"
+                          href="https://demos.creative-tim.com/argon-design-system-react/#/documentation/alert?ref=adsr-navbar"
+                          target="_blank"
                         >
                           <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
                             <i className="ni ni-palette" />
@@ -133,35 +137,47 @@ class DemoNavbar extends React.Component {
                       </div>
                     </DropdownMenu>
                   </UncontrolledDropdown>
-                </Nav> */}
-
-                <Nav className="align-items-lg-center ml-lg-auto" navbar>
-                  <NavItem>
-                    <NavLink tag={Link}
-                      className="nav-link-icon"
-                      to="/our-works"
-                    >
-                      Our Works
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink tag={Link}
-                      className="nav-link-icon"
-                      to="/contact-us"
-                    >
-                      Contact Us
-                    </NavLink>
-                  </NavItem>
                   <NavItem>
                   <NavLink tag={Link}
                       className="nav-link-icon"
-                      to="/about"
+                      to="/pos/pricing"
                     >
-                      About Us
+                      Harga
                     </NavLink>
                   </NavItem>
                 </Nav>
-
+                <Nav className="align-items-lg-center ml-lg-auto" navbar>
+                  
+                  <NavItem>
+                  {/* <NavLink tag={Link}
+                      className="nav-link-icon"
+                      to="/login"
+                    >
+                      Masuk
+                    </NavLink> */}
+                  <a
+                      className="nav-link-icon"
+                      href="https://pos.qlola.com/"
+                    >
+                      Login
+                    </a>
+                  </NavItem>
+                  <NavItem className="d-none d-lg-block ml-lg-4">
+                    <Link to="/pos/register">
+                    <Button
+                      className="btn-neutral btn-icon"
+                      color="default"
+                    >
+                      {/* <span className="btn-inner--icon">
+                        <i className="fa fa-handshake-o mr-2" />
+                      </span> */}
+                      <span className="nav-link-inner--text ml-1">
+                        Daftar
+                      </span>
+                    </Button>
+                    </Link>
+                  </NavItem>
+                </Nav>
               </UncontrolledCollapse>
             </Container>
           </Navbar>

@@ -20,15 +20,16 @@ import {
 } from "reactstrap";
 
 // core components
-import Navbar from "components/Navbars/Navbar.js";
-import CardsFooter from "components/Footers/CardsFooter.js";
-import Pricing from '../Sections/Pricing';
+import Navbar from "./NavbarPos";
+import CardsFooter from "components/Footers/CardsFooter";
+import Pricing from '../../Sections/Pricing';
 import { Link } from 'react-router-dom';
 
 // index page sections
-import Download from "../Sections/Download.js";
+import Download from "../../Sections/Download";
+import SimpleFooter from "components/Footers/SimpleFooter";
 
-class Landing extends React.Component {
+class Pos extends React.Component {
   state = {};
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -85,7 +86,7 @@ class Landing extends React.Component {
                           </span>
                           <span className="btn-inner--text">Daftar Gratis Sekarang</span>
                         </Button> */}
-                        <Link to="/register">
+                        <Link to="/pos/register">
                     <Button
                       className="btn-neutral btn-icon"
                       color="default"
@@ -156,7 +157,7 @@ class Landing extends React.Component {
                           </div>
                           <div>
                             <h6 className="mb-0">
-                              Pantau Laporan dan penjualan di manapun
+                              Pantau Laporan dan penjualan
                             </h6>
                           </div>
                         </div>
@@ -172,7 +173,37 @@ class Landing extends React.Component {
                             </Badge>
                           </div>
                           <div>
-                            <h6 className="mb-0">Kelola stok dengan mudah</h6>
+                            <h6 className="mb-0">Kelola stok</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li className="py-2">
+                        <div className="d-flex align-items-center">
+                          <div>
+                            <Badge
+                              className="badge-circle mr-3"
+                              color="success"
+                            >
+                              <i className="ni ni-shop" />
+                            </Badge>
+                          </div>
+                          <div>
+                            <h6 className="mb-0">Cabang tak terbatas</h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li className="py-2">
+                        <div className="d-flex align-items-center">
+                          <div>
+                            <Badge
+                              className="badge-circle mr-3"
+                              color="success"
+                            >
+                              <i className="ni ni-single-02" />
+                            </Badge>
+                          </div>
+                          <div>
+                            <h6 className="mb-0">Operator/Kasir tak terbatas</h6>
                           </div>
                         </div>
                       </li>
@@ -214,7 +245,7 @@ class Landing extends React.Component {
                     {/* <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
                       <i className="ni ni-settings" />
                     </div> */}
-                    <h3>Cross Device</h3>
+                    <h3>Didesain untuk berbagai bevice</h3>
                     <p className="lead">
                     Dapat digunakan di Komputer, Laptop, Tablet maupun handphone tanpa instalasi karena Qlola POS berbasiskan web.
 
@@ -424,10 +455,10 @@ class Landing extends React.Component {
             </Container>
           </section>
         </main>
-      <CardsFooter />
+      <SimpleFooter />
       </>
     );
   }
 }
 
-export default Landing;
+export default Pos;

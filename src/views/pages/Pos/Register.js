@@ -18,10 +18,24 @@ import {
 } from "reactstrap";
 
 // core components
-import Navbar from "components/Navbars/Navbar.js";
+import Navbar from "./NavbarPos";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 class Register extends React.Component {
+
+  state = {
+    name: 'asd',
+    email: '',
+    password: ''
+  }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name] : e.target.value})
+  }
+
+  handleSubmit = () => {
+    console.log(this.state)
+  }
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -47,44 +61,14 @@ class Register extends React.Component {
               <Row className="justify-content-center">
                 <Col lg="5">
                   <Card className="bg-secondary shadow border-0">
-                    <CardHeader className="bg-white pb-5">
+                    {/* <CardHeader className="bg-white">
                       <div className="text-muted text-center mb-3">
                         <small>Sign up with</small>
                       </div>
-                      <div className="text-center">
-                        <Button
-                          className="btn-neutral btn-icon mr-4"
-                          color="default"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <img
-                              alt="..."
-                              src={require("assets/img/icons/common/github.svg")}
-                            />
-                          </span>
-                          <span className="btn-inner--text">Github</span>
-                        </Button>
-                        <Button
-                          className="btn-neutral btn-icon ml-1"
-                          color="default"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <span className="btn-inner--icon mr-1">
-                            <img
-                              alt="..."
-                              src={require("assets/img/icons/common/google.svg")}
-                            />
-                          </span>
-                          <span className="btn-inner--text">Google</span>
-                        </Button>
-                      </div>
-                    </CardHeader>
-                    <CardBody className="px-lg-5 py-lg-5">
+                    </CardHeader> */}
+                    <CardBody className="px-lg-5">
                       <div className="text-center text-muted mb-4">
-                        <small>Or sign up with credentials</small>
+                        <small>Daftar</small>
                       </div>
                       <Form role="form">
                         <FormGroup>
@@ -94,7 +78,7 @@ class Register extends React.Component {
                                 <i className="ni ni-hat-3" />
                               </InputGroupText>
                             </InputGroupAddon>
-                            <Input placeholder="Name" type="text" />
+                            <Input placeholder="Name" type="text" name="name" onChange={this.handleChange} />
                           </InputGroup>
                         </FormGroup>
                         <FormGroup>
@@ -104,7 +88,7 @@ class Register extends React.Component {
                                 <i className="ni ni-email-83" />
                               </InputGroupText>
                             </InputGroupAddon>
-                            <Input placeholder="Email" type="email" />
+                            <Input placeholder="Email" type="email" name="email" onChange={this.handleChange} />
                           </InputGroup>
                         </FormGroup>
                         <FormGroup>
@@ -115,20 +99,22 @@ class Register extends React.Component {
                               </InputGroupText>
                             </InputGroupAddon>
                             <Input
+                            name="password"
                               placeholder="Password"
                               type="password"
                               autoComplete="off"
+                              onChange={this.handleChange}
                             />
                           </InputGroup>
                         </FormGroup>
-                        <div className="text-muted font-italic">
+                        {/* <div className="text-muted font-italic">
                           <small>
                             password strength:{" "}
                             <span className="text-success font-weight-700">
                               strong
                             </span>
                           </small>
-                        </div>
+                        </div> */}
                         <Row className="my-4">
                           <Col xs="12">
                             <div className="custom-control custom-control-alternative custom-checkbox">
@@ -142,13 +128,17 @@ class Register extends React.Component {
                                 htmlFor="customCheckRegister"
                               >
                                 <span>
-                                  I agree with the{" "}
+                                  Saya setuju dengan{" "}
+                                  
                                   <a
-                                    href="#pablo"
-                                    onClick={e => e.preventDefault()}
+                                    href="/"
+                                    target="_blank"
                                   >
+                                  <span>
                                     Privacy Policy
+                                    </span>
                                   </a>
+                                  
                                 </span>
                               </label>
                             </div>
@@ -159,8 +149,9 @@ class Register extends React.Component {
                             className="mt-4"
                             color="primary"
                             type="button"
+                            onClick={this.handleSubmit}
                           >
-                            Create account
+                            Buat Akun
                           </Button>
                         </div>
                       </Form>

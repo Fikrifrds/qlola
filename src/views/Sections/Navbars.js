@@ -32,7 +32,7 @@ class Navbars extends React.Component {
           {/* Navbar default */}
           <Navbar className="navbar-dark bg-default" expand="lg">
             <Container>
-              <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+              <NavbarBrand onClick={e => e.preventDefault()}>
                 Default Color
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar-default">
@@ -61,7 +61,6 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
                       onClick={e => e.preventDefault()}
                     >
                       <i className="ni ni-favourite-28" />
@@ -73,7 +72,6 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
                       onClick={e => e.preventDefault()}
                     >
                       <i className="ni ni-notification-70" />
@@ -94,20 +92,20 @@ class Navbars extends React.Component {
                       right
                     >
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Action
                       </DropdownItem>
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Another action
                       </DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Something else here
@@ -121,7 +119,7 @@ class Navbars extends React.Component {
           {/* Navbar primary */}
           <Navbar className="navbar-dark bg-primary mt-4" expand="lg">
             <Container>
-              <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+              <NavbarBrand onClick={e => e.preventDefault()}>
                 Primary Color
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar-primary">
@@ -148,12 +146,12 @@ class Navbars extends React.Component {
                 </div>
                 <Nav className="ml-lg-auto" navbar>
                   <NavItem>
-                    <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                    <NavLink onClick={e => e.preventDefault()}>
                       Discover <span className="sr-only">(current)</span>
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                    <NavLink onClick={e => e.preventDefault()}>
                       Profile
                     </NavLink>
                   </NavItem>
@@ -164,20 +162,20 @@ class Navbars extends React.Component {
                       right
                     >
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Action
                       </DropdownItem>
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Another action
                       </DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Something else here
@@ -191,7 +189,7 @@ class Navbars extends React.Component {
           {/* Navbar success */}
           <Navbar className="navbar-dark bg-success mt-4" expand="lg">
             <Container>
-              <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+              <NavbarBrand onClick={e => e.preventDefault()}>
                 Success Color
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar-success">
@@ -220,7 +218,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="ni ni-favourite-28" />
@@ -232,7 +230,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="ni ni-planet" />
@@ -253,20 +251,20 @@ class Navbars extends React.Component {
                       right
                     >
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Action
                       </DropdownItem>
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Another action
                       </DropdownItem>
                       <DropdownItem divider />
                       <DropdownItem
-                        href="#pablo"
+                         
                         onClick={e => e.preventDefault()}
                       >
                         Something else here
@@ -280,7 +278,7 @@ class Navbars extends React.Component {
           {/* Navbar danger */}
           <Navbar className="navbar-dark bg-danger mt-4" expand="lg">
             <Container>
-              <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+              <NavbarBrand onClick={e => e.preventDefault()}>
                 Danger Color
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar-danger">
@@ -309,7 +307,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-facebook-square" />
@@ -321,7 +319,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-twitter" />
@@ -333,7 +331,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-google-plus" />
@@ -345,7 +343,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-instagram" />
@@ -361,7 +359,7 @@ class Navbars extends React.Component {
           {/* Navbar warning */}
           <Navbar className="navbar-dark bg-warning mt-4" expand="lg">
             <Container>
-              <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+              <NavbarBrand onClick={e => e.preventDefault()}>
                 Warning Color
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar-warning">
@@ -390,7 +388,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-facebook-square" />
@@ -402,7 +400,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-twitter" />
@@ -414,7 +412,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-pinterest" />
@@ -430,7 +428,7 @@ class Navbars extends React.Component {
           {/* Navbar info */}
           <Navbar className="navbar-dark bg-info mt-4" expand="lg">
             <Container>
-              <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+              <NavbarBrand onClick={e => e.preventDefault()}>
                 Info Color
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar-info">
@@ -459,7 +457,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-facebook-square mr-1" />
@@ -469,7 +467,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-twitter mr-1" />
@@ -479,7 +477,7 @@ class Navbars extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#pablo"
+                       
                       onClick={e => e.preventDefault()}
                     >
                       <i className="fa fa-instagram mr-1" />

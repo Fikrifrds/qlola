@@ -2,7 +2,16 @@
     cursor: pointer;
 }
 
-a {
+header a {
     text-decoration: none;
     color: white;
+}
+
+.active {
+    font-weight: bold;
+    color: aqua
+}
+
+.nav-link-icon:hover{
+    color: aqua
 }
