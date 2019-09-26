@@ -63,7 +63,7 @@ class About extends React.Component {
                     </div>
                     <div className="h6 mt-4">
                       <i className="ni business_briefcase-24 mr-2" />
-                        Digital Solutions
+                        A Web Solution
                     </div>
                   </div>
                   <div className="mt-5 py-5 border-top text-center">
