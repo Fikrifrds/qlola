@@ -46,7 +46,7 @@ class Login extends React.Component {
   handleSubmit = async e => {
     e.preventDefault();
     this.setState({ isSending: true });
-    await fetch('http://localhost:5001/email', {
+    await fetch('https://qlola-api.herokuapp.com/email', {
       method: 'post',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({

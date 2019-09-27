@@ -64,7 +64,7 @@ class Harga extends React.Component {
                   <Link to={`/our-works/${project.slug()}`}>
                     <CardImg
                       alt="..."
-                      src={project.imgUrl}
+                      src={project.thumbnailHostname + project.imgPathName}
                     />
                   </Link>
                   <div style={{ padding: '20px'}}>

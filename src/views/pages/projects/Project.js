@@ -65,7 +65,7 @@ class Harga extends React.Component {
                 <Card className="shadow border-0">
                     <CardImg
                       alt="..."
-                      src={project.imgUrl}
+                      src={project.originalHostName + project.imgPathName}
                     />
                 </Card>
               </Col>

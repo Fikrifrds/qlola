@@ -70,10 +70,10 @@ class About extends React.Component {
                     <Row className="justify-content-center">
                       <Col lg="9">
                         <p>
-                        A Software Company ready to serve Your needs with Latest Technology, 
-                        Best Available Solutions and Tools that makes your Software Experience much Better than Ever before.
-                        Our IT Professionals are updated with Knowledge and Experiance of Latest Technologies, 
-                        Tools and Platform which will help far better than ever before.
+                        A Web Solution Company ready to serve your needs with Latest Technology, 
+                        Best Available Solutions that makes your Business Experience much Better than before.
+                        Our IT Professionals are updated with Knowledge and Experience of Latest Technologies, 
+                        Tools and Platform which will help far better.
                         </p>
                       </Col>
                     </Row>
