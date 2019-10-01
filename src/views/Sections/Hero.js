@@ -6,7 +6,7 @@ import { Button, Container, Row, Col } from "reactstrap";
 
 function Hero(){
 
-  const bridges = [ 'Website', 'E-Commerce', 'Web App', 'Software', 'Landing Page', 'SaaS', 'API' ]
+  const bridges = [ 'Website', 'E-Commerce', 'Web App', 'Software', 'Landing Page', 'SaaS', 'API', 'CMS' ]
   const [bridge, setBridge] = useState(0);
 
   useEffect(() => {
