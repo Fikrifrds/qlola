@@ -1,19 +1,44 @@
 import React from "react";
 import renderHTML from 'react-render-html';
 // reactstrap components
-import { Button, Card, Container, Row, Col, CardImg } from "reactstrap";
+import { Button, Card, Container, Row, Col, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle } from "reactstrap";
 import { Link } from 'react-router-dom';
 // core components
 import Navbar from "components/Navbars/Navbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 import projects from './data';
-
+import ShowImage from './ShowImage';
 
 class Harga extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { urlPathName: '', description: '' };
+    this.state = {
+      modal: false
+    };
+
+    // this.toggle = this.toggle.bind(this);
+  }
+
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
+  }
+
+  handleSelectImage = (urlPathName, description) => {
+    this.setState({ urlPathName: urlPathName, description:description })
+    this.setState(prevState => ({
+      modal: !prevState.modal
+    }));
+  }
+
+  toggle = () => {
+    this.setState(prevState => ({
+      modal: !prevState.modal
+    }));
   }
 
   render() {
@@ -65,7 +90,7 @@ class Harga extends React.Component {
                 <Card className="shadow border-0">
                     <CardImg
                       alt="..."
-                      src={project.originalHostName + project.imgPathName}
+                      src={'https://ik.imagekit.io/qlola/tr:w-1200/' + project.imgPathName}
                     />
                 </Card>
               </Col>
@@ -80,6 +105,28 @@ class Harga extends React.Component {
                 </div><br/>
                 <div>Site Url : <a target="_blank" rel="noopener noreferrer" href={project.url}>{project.url}</a></div>
               </Col>
+            </Row>
+            <Row>
+            <ShowImage urlPathName={this.state.urlPathName} description={this.state.description} modal={this.state.modal} toggle={this.toggle} />
+              <div style={{ textAlign: 'center', padding:'10px'}}>
+                <h3 className="text-center">Images:</h3>
+              </div>
+            
+                <div style={{ display: 'flex', flexWrap: 'wrap'}}>
+                  { project.imageCollectionPathName.map((image, index) => (
+                    <Col className="mb-5 mb-md-6" md="4" key={index}>
+                    <Card onClick={ () => this.handleSelectImage(image.urlPathName, image.description) } style={{ textAlign: 'center', cursor: 'pointer'}}>
+                      <CardImg top width="100%" src={project.thumbnailHostname + image.urlPathName} alt="Card image cap" />
+                      
+                    </Card>
+                    <div className="text-center">
+                    <p>{image.description}</p>
+                    </div>
+                      
+                    </Col>
+                  ))}
+                </div>
+              
             </Row>
           </Container>
           

@@ -14,6 +14,7 @@ class Harga extends React.Component {
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
+
   render() {
     return (
       <>
@@ -58,8 +59,8 @@ class Harga extends React.Component {
             <section className="section section-lg pt-lg-0 mt--200">
             <Container className="container-lg">
             <Row>
-              { projects.map( project => (
-                <Col className="mb-5 mb-md-6" md="6">
+              { projects.map( (project, index) => (
+                <Col className="mb-5 mb-md-6" md="6" key={index}>
                 <Card className="card-lift--hover shadow border-0">
                   <Link to={`/our-works/${project.slug()}`}>
                     <CardImg
