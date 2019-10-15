@@ -20,6 +20,15 @@ import {
 import Navbar from "components/Navbars/Navbar.js";
 import SimpleFooterProject from "components/Footers/SimpleFooterProject.js";
 
+function query(){
+  let queryParam ='';
+  var urlParams = new URLSearchParams(window.location.search);
+  if(urlParams.has('need')){
+    queryParam = `I need ${['API'].includes(urlParams.get('need')) ? 'an' : 'a'} ${urlParams.get('need')} for my business`; 
+  }
+  return queryParam
+}
+
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +38,8 @@ class Login extends React.Component {
       phoneNumber: '',
       messageBody: '',
       isSending: false,
-      sent: false
+      sent: false,
+      messageError: []
     };
   }
 
@@ -37,6 +47,8 @@ class Login extends React.Component {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
+    const msg = query()
+    this.setState({ messageBody: msg})
   }
   
   handleChange = e => {
@@ -45,6 +57,16 @@ class Login extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+    this.setState({ messageError: []})
+    if(!this.state.fullName || !this.state.emailAddress || !this.state.messageBody ){
+      let message = [];
+      !this.state.fullName && message.push('Full Name')
+      !this.state.emailAddress && message.push('Email Address')
+      !this.state.messageBody && message.push('Message')
+      this.setState({ messageError: message})
+      return
+    }
+
     this.setState({ isSending: true });
     await fetch('https://qlola-api.herokuapp.com/email', {
       method: 'post',
@@ -104,10 +126,16 @@ class Login extends React.Component {
                           <span style={{ fontSize: '30px'}} aria-label="a thumbs up blasting off" role="img">👍</span>
                       </div> :
                       <>
-                      <div className="text-center text-muted mb-4">
+                      <div className="text-center text-muted mb-2">
                         <small>Describe Your Need</small>
                       </div>
-                      <Form role="form" onSubmit={this.handleSubmit}>
+                      <div style={{color: 'red', textAlign: 'center', fontSize: 'small', paddingBottom:'10px'}}>
+                      {this.state.messageError.map( message => (
+                        <div>{message + ' is required'}</div>
+                      ))}
+                      </div>
+                     
+                      <Form role="form" onSubmit={this.handleSubmit} noValidate>
                       <FormGroup className="mb-3">
                           <InputGroup className="input-group-alternative">
                             <InputGroupAddon addonType="prepend">
@@ -166,7 +194,7 @@ class Login extends React.Component {
                           
                               </InputGroupText>
                             </InputGroupAddon>
-                            <textarea class="form-control form-control-alternative" rows="3" 
+                            <textarea className="form-control form-control-alternative" rows="3" 
                             placeholder="Write your message here ..."
                             type="text"
                             autoComplete="off"

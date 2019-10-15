@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
-
+import WorkQlola from './WorksQlola'
 function Hero(){
 
   const bridges = [ 'Website', 'E-Commerce', 'Web App', 'Software', 'Landing Page', 'SaaS', 'API', 'CMS' ]
@@ -96,6 +96,7 @@ function Hero(){
                       </Button>
                       </Link>
                     </div>
+                    
                     {/* <div className="mt-5">
                       <small className="text-white font-weight-bold mb-0 mr-2">
                         *proudly coded by
@@ -111,6 +112,9 @@ function Hero(){
                 </Row>
               </div>
             </Container>
+          </section>
+          <section className="section section-lg">
+            <WorkQlola />
           </section>
         </div>
       </>
